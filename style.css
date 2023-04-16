@@ -1,195 +1,228 @@
 html {box-sizing: border-box;}
-
-*,::after, ::before {box-sizing: inherit;
+*,
+::before,
+::after {
+    box-sizing: inherit;
 }
 
 body {
-    background-color: #FAFAFA;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
+    color: #8B8B8B;
+    line-height: 1.5;
+    background-color: #FAFAFA;
 }
 
-
-
-.picture img {
-    width: 100%;
-    height: auto;
-    margin: 60px 75px 40px 75px;
-}
-
-.general {
-    width: 100%;
-    
-}
-.general h1 {
+h1 {
     font-size: 28px;
-    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 32px;
     text-align: center;
-    margin: 0;
+    font-weight: 500;
+    color: black;
 }
 
 h1::after {
     content: "";
-    background-color: #407BFF;
-    width: 60px;
-    height: 2px;
     display: block;
-    margin: 10px 220px;
+    width: 60px;
+    margin: 0px auto;
+    padding-bottom: 10px;  
+    border-bottom: 2px solid #407BFF;
 }
 
-.general p {
+h2 {
     font-size: 16px;
-    font-weight: 300;
-    color: #8B8B8B;
     text-align: center;
-    margin: 30px 20px;
-
-}
-
-.section-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-.button {
-    border-radius: 20px;
-    font-size: 14px;
-    padding: 10px 30px;
-    border: none;
-    height: 40px;
-    align-items: center;
-}
-
-.blue {
-    background-color: #407BFF;
-    color: white;
-    margin-bottom: 10px;
-    width: 200px;
-}
-
-a {
-    font-family: 'Montserrat';
-    font-size: 14px;
-}
-
-.blue a {
-    width: 130px;
-    height: 20px;
-}
-
-.grey {
-    background-color: #8B8B8B;
-    color: white;
-    width: 230px;
-    height: 40px;
-}
-
-.grey a {
-    width: 160px;
-    height: 20px;
-}
-
-.general h2 {
-    text-align: center;
-    font-size: 16px;
+    margin-bottom: 16px;
     font-weight: 500;
-    margin-top: 60px;
+    color: black;
 }
 
+.services {
+    text-align: center;
+    margin: 60px 20px 0 20px;
+}
 
-.travel-info {
+.main-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: 60px auto 60px auto;
+}
+
+.main-picture img {
+    width: 100%;
+}
+
+.paragraph {
+    margin: 0 ;
+}
+
+.buttons {
     display: flex;
     flex-direction: column;
-    margin-bottom: 60px;
-    align-items:  center;
-    
-    
-
 }
 
-.container  {
-    background-color: white;
-    border-radius: 10px;
+a.button {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 10px 30px;
+}
+
+a.blue {
+    margin-top: 30px;
+    background-color: #407BFF;
+}
+
+a.grey{
+    margin-top: 10px;
+    background-color: #8B8B8B;
+}
+
+.paragraph2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.services .text {
+    margin-bottom: 20px;
+}
+.text {
+    margin-bottom: 0;
+}
+
+.item {
     display: flex;
-    margin: 0 20px 15px 20px ;
-    width: 90%;
+    background-color: #FFFFFF;
     box-shadow: 0px 4px 6px #407BFF1F;
-    
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
 }
 
-.container img {
-    margin: 20px 30px 20px 20px;
-   
-}
-
-.container p {
-    width: 100%;
-    margin: 30px 20px 20px 0;
+.item p {
+    padding-left: 30px;
     font-size: 13px;
-    color: #8B8B8B;
 }
 
+@media screen and (min-width: 640px) {
 
-@media screen and (min-width:640px ){
-    .obsah {
-        min-width: 800px;
-    }
-    
-
-  
-    .general p {
-        margin: 30px 110px;
+    .services {
+        margin-bottom: 80px;
     }
 
-    .picture img {
-        width: 100%;
-        height: auto;
-    }
-    .section-button {
-        flex-direction: row;
-        justify-content: center;
+    .main-picture {
+        width: 400px;
+        margin-bottom: 30px;
     }
 
-    .button {
-        margin: 0 10px;
-    }
-    
-    .travel-info {
+    .buttons {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        
-        
-    }
-    .container {
-        flex-direction: column;
-        flex-basis: 33.33333;
-        flex-grow: 1;
-        margin-bottom: 0;
-        
+        margin-top: 30px;
+        gap: 20px;
     }
 
-    .container img {
-        width: 20%;
-        align-self: center;
+    a.blue, a.grey {
+        margin: 0;
+    }
+
+    .items {
+        display: flex;
+        gap: 20px;
+    }
+
+    .item {
+        display: flex;
+        flex: 0 1 calc(100% / 3);
+        flex-direction: column;
+        padding: 40px 15px 21px 15px;
+        margin-bottom: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item p {
+        margin: 20px 0 20px 0;
+        padding: 0;
+    }
+
+    .item img {
+        display: flex;
+        justify-content: center;
+        order: -1;
+        width: 50px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .services {
+        display: flex;
+        max-width: 1040px;
+        margin: 80px 110px 80px 80px;
+    }
+
+    .services-text {
+        text-align: left;
+        flex-basis: 50%;
+    }
+
+    h1::after {
+        margin: 0;
+    }
+
+    .office {
+        margin: 0 80px 0px 80px;
+        flex-direction: row-reverse;
+    }
+
+    .office .text {
+        margin-left: 60px;
         margin-top: 40px;
     }
 
-    .container p {
-        text-align: center;
-        padding: 0 15px 40px 15px;
-        margin: 0;
-        
+    .services .text {
+        margin-top: 40px;
     }
 
-    .container:nth-child(2){
-        margin-right: 0;
-        margin-left: 0;
+    .text {
+        max-width: 430px;
     }
-
-}
     
+    .services-text {
+        margin-top: 50px;
+    }
 
+    .services h2, p {
+        text-align: left;
+    }
+
+    .main-picture {
+        order: 1;
+        flex-basis: 50%;
+        margin: 0;
+    }
+
+    .main-picture img {
+        max-width: 425px;
+    }
+   
+    .services-text h1 {
+        text-align: left;
+    }
+
+    .buttons {
+        justify-content: flex-start;
+    }
+
+    .item p {
+        text-align: center;
+    }
+}
